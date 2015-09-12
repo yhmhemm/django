@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" Content="text/html;charset=UTF-8" />
+	<title>{{title}}</title>
+</head>
+<body>
+<h1>hello {{user.name}}</h1>
+<li>age: {{user.age}}</li>
+<li>sex: {{user.sex}}</li>
+{%if user%}
+<div>{{user.name}} say:{{user.say}}</div>
+{%else%}
+<div>用户不存在</div>
+{%endif%}
+
+{%for book_list in book_list%}
+<li>{{book_list}}</li>
+{%endfor%}
+
+{%for k,v in user.items%}
+<li>{{forloop.counter}}.{{k}}:{{v}}</li>
+{%endfor%}
+</body>
+</html>

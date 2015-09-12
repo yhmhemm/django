@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" Content="text/html;charset=UTF-8" />
+	<title>{{title}}</title>
+</head>
+<body>
+{% for emp in emps %}
+<div>{{forloop.counter}} {{emp}}</div>
+{%endfor%}
+<div>共有{{emp.length}}条记录</div>
+</body>
+</html>
